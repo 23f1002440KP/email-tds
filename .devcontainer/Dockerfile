@@ -8,4 +8,4 @@ RUN apt-get update && \
     python --version
 
 # Install required Python package fastapi globally
-RUN python -m pip install --no-cache-dir fastapi
+RUN python -m pip install fastapi

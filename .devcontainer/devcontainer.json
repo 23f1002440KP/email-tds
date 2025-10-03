@@ -1,8 +1,7 @@
 {
   "name": "ga2-67b39c",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/python": "1"
+  "build": {
+    "dockerfile": "Dockerfile"
   },
   "customizations": {
     "vscode": {
@@ -12,5 +11,6 @@
       ]
     }
   },
-  "postCreateCommand": "uv pip install fastapi"
+  "postCreateCommand": "uv pip install fastapi",
+  "remoteUser": "vscode"
 }

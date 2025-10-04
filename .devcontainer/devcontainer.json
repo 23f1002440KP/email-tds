@@ -1,14 +1,17 @@
 {
   "name": "ga2-67b39c",
-  "image": "mcr.microsoft.com/devcontainers/alpine:3.22",
   "features": {
-    "ghcr.io/devcontainers/features/python": 1
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"
+    }
   },
-  "extensions": [
-    "ms-python.python",
-    "astral-sh.uv"
-  ],
-  "postCreateCommand": "uv pip install fastapi",
-  "forwardPorts": [],
-  "remoteUser": "vscode"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astral-sh.uv",
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "uv pip install fastapi"
 }
